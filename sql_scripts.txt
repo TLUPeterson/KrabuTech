@@ -1,0 +1,19 @@
+CREATE DATABASE xmlFileLocations;
+
+USE xmlFileLocations;
+
+CREATE TABLE filelocations (
+    meetingid INT PRIMARY KEY,
+    file_location VARCHAR(255) NOT NULL
+);
+
+INSERT INTO filelocations (meetingid, file_location)
+VALUES
+    (8020, './XML_8020.xml'),
+    (8021, './XML_8021.xml'),
+    (8025, './XML_8025.xml'),
+    (1580, './XML_1580.xml'),
+    (1582, './XML_1582.xml'),
+    (8026, './XML_8026');
+
+CREATE INDEX idx_meetingid ON filelocations (meetingid);
